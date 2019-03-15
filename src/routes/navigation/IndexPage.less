@@ -1,0 +1,139 @@
+@import "../../theme/common.less";
+.d1{
+  width: 100%;
+  height: 100%;
+  // background: dodgerblue;
+  transition: .5s all linear;
+  // text-align: center;
+  // line-height: 100px;
+  // margin: 100px auto;
+  // color: white;
+  position: relative;
+  // font-size: 32px;
+  // font-weight: bold;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.d2{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 2px;
+  transition: .5s;
+}
+.d3{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  transition: .5s;
+}
+.d4{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    height: 0;
+    transition: .5s .5s;
+}
+.d5{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2px;
+  height: 0;
+  transition: .5s .5s;
+}
+.d1:hover{
+  background: transparent;
+  color:@cf-border-color;
+}
+.d1:hover .d2,.d1:hover .d3{
+  width: 100%;
+  background:@cf-border-color;
+}
+.d1:hover .d4,.d1:hover .d5{
+  background:@cf-border-color;
+  height: 100%;
+}
+
+.wrap{
+  width: 100%;
+  height: 100%;
+  background-color: @cf-base-bg;
+}
+
+.basics{
+  width: 95%;
+  margin: 15px auto;
+}
+.text{
+  font-size: 14px;
+  font-weight: bold;
+  color: @cf-title-text;
+  margin: 5px;
+  display: block;
+}
+.fontText{
+  float: left;
+  font-size: 18px;
+  color: #60c8ea;
+  margin-bottom: 10px;
+}
+.memoText{
+  font-size: 12px;
+  line-height: 20px;
+  color: #c0e1eb;
+}
+.group{
+  width: 100%;
+  border: 1px solid @cf-border-color;
+  margin-bottom: 20px;
+}
+.group:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.card{
+  float: left;
+  margin: 13px;
+  width: 280px;
+  height: 100px;
+  background: @cf-card-color;
+  // box-sizing: border-box;
+  // padding:10px;
+  transition:background .3s, box-shadow 1s;
+}
+.card:hover{
+  background: #0c1f30;
+  box-shadow: 0 0 10px @cf-border-color;
+}
+
+.title{
+  .border-bottom;
+}
+.introduce{
+  float: left;
+  font-size: 14px;
+  color: #fff;
+  width: 65%;
+  line-height: 16px;
+}
+.photograph{
+  float: left;
+  margin-right: 10px;
+  width: 80px;
+  height: 80px;
+}
+.clearfix:after{
+  content: "";
+  display: inline-block;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+

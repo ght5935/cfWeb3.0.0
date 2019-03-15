@@ -1,0 +1,239 @@
+@import "../../../theme/common.less";
+
+@margin_bottom: 1vh;
+
+.content{
+  height: calc(~"100vh - 130px");
+  min-height: 804px;
+  .border;
+  border-top: none;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.searchBar{
+  height: 74px;
+  line-height: 74px;
+  width: 100%;
+  .border;
+  margin-bottom: @margin_bottom;
+}
+.selectInput{
+  color: #ffffff;
+}
+
+.btnBar{
+  margin: 1vh auto;
+  width: 100%;
+  height: 30px;
+  background-color: @cf-base-bg;
+}
+.delete{
+  display: inline-block;
+  width: 150px;
+  height: 30px;
+  border: 1px solid @cf-border-color;
+  border-radius: 6px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 30px;
+}
+.deleteIcon{
+  display: inline-block;
+  width: 18px;
+  height: 16px;
+  background: url("../../../assets/deleteIcon.png") no-repeat;
+  vertical-align: middle;
+}
+
+.tableRow{
+  padding: 5px;
+}
+
+.tableImgBorder{
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 2px;
+  width: 75px;
+  height: 75px;
+  .border;
+}
+
+.tableBtn{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.tableEdit{
+  background: url('../../../assets/tableEdit.png');
+  background-size: 100% 100%;
+}
+.tableCheck{
+  background: url('../../../assets/tableCheck.png');
+  background-size: 100% 100%;
+}
+.tableDelete{
+  background: url('../../../assets/tableDelete.png');
+  background-size: 100% 100%;
+}
+.addIcon{
+  display: inline-block;
+  width: 18px;
+  height: 16px;
+  background: url("../../../assets/addIcon.png") no-repeat;
+  vertical-align: middle;
+}
+// Modal
+.modalInput{
+  margin: 20px 0;
+}
+.modalLabel{
+  display: inline-block;
+  text-align: right;
+  width: 100px;
+  color: #fff;
+  margin-right: 10px;
+}
+.modalImg{
+ width: 128px;
+}
+.imgToBeSelected{
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 2px dashed #91a0af;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  vertical-align: middle;
+
+}
+.imgSelected{
+  border: 2px solid @cf-border-color;
+}
+.imgToBeSelected img{
+  width: 100%;
+  height: 100%;
+}
+.imgContainer{
+  width: 100%;
+  overflow-x: auto;
+}
+.upload{
+  display: inline-block;
+  vertical-align: middle;
+}
+.remindText{
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  color: @cf-title-text;
+}
+.tablestyle{
+  width:100%;
+  margin: 10px 0 8px 10px;
+  color:#ffffff;
+  
+}
+
+.tablestyle thead tr th:nth-child(1),.tablestyle tbody tr td:nth-child(1) {
+
+  width:17%;
+  text-align: right;
+}
+
+.tablebody{
+  height: 250px;
+  border-bottom: 1px solid @cf-title-text;
+}
+.detection ,.fileImg{ 
+  border: 1px dashed @cf-border-color;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.active, .fileImgActive{
+  border: 2px solid @cf-border-color;
+  border-radius: 3px;
+}
+
+.modalFooter{
+  margin-left: 18%;
+  margin-top:10px;
+}
+
+.modalFooterContent{
+  margin-top:10px;
+  width:98%;
+  border: 1px solid @cf-title-text;
+  // height:98px;
+  min-height: 98px;
+  max-height:300px ;
+  overflow-y: scroll;
+}
+
+.editModalHeader{
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 10px;
+  border-bottom: 1px solid @cf-title-text;
+}
+
+.facePicture{
+  height: 112px;
+  width: 96%;
+  border: 1px solid #02abe3;
+}
+.tipTitleTop{
+  font-size: 12px;
+  color:#02abe3; 
+}
+.tipTitle{
+  font-size: 12px;
+  color:#02abe3;
+  position: absolute;
+}
+
+.uploadRenderC{
+  :global{
+    .ant-upload.ant-upload-select-picture-card {
+      width: 85px;
+      height: 86px;
+    }
+    .ant-upload-list-picture-card .ant-upload-list-item{
+      width: 85px;
+      height: 86px;
+      margin:0 4px 8px 0;
+    }
+  }
+}
+.searchGroup{
+  // margin: 2vh auto;
+  width: 100%;
+  height: 74px;
+  background-color: @cf-base-bg;
+  border:1px solid @cf-border-color;
+  line-height: 74px;
+}
+.condition{
+  float: left;
+  //width: 500px;
+  color: #ffffff;
+}
+.label{
+  margin: 0 20px 0 28px;
+}
+
+.modalHeader{
+  position: relative;
+}
+.modalClose{
+  position: absolute;
+  right: 10px;
+  font-size: 18px;
+  color:#02abe3;
+  cursor: pointer;
+}

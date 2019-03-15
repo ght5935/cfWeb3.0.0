@@ -1,0 +1,162 @@
+.contain{
+    margin: 0 auto;
+    height: 532px;
+    line-height:532px;
+}
+.outCircle{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    position: relative;
+    background: linear-gradient(to left, rgba(66, 219, 224, .5), rgba(66, 219, 224, .1));
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.outCircleDown{
+    background: linear-gradient(to left, rgba(57, 170, 226, .5), rgba(57, 170, 226, .1));
+}
+.innerCircle{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    background:rgba(66, 219, 224, 1);
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.innerCircleDown{
+    background:rgba(57, 170, 226, 1);
+}
+.tlItem{
+    float: left;
+    margin-right: -8px;
+    opacity: 0;
+    animation: show-fade .5s forwards 1; 
+}
+.line{
+    transform: translateX(6px);
+    display: inline-block;
+    width: 132px;
+    height: 6px;
+    background: linear-gradient(to left,rgba(66, 219, 224, 1) 5%, rgba(66, 219, 224, .2) 50%, rgba(66, 219, 224, 0));
+    vertical-align: middle;
+}
+.lineDown{
+    background: linear-gradient(to left,rgba(57, 170, 226, 1) 5%, rgba(57, 170, 226, .2) 50%, rgba(57, 170, 226, 0));
+}
+.arrow{
+    position: absolute;
+    height: 50px;
+    width: 1px;
+    background: rgba(66, 219, 224, 1);
+    top: -50px;
+    left: 50%;
+   
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: show-fade .5s forwards 1; 
+}
+.arrowDown{
+    top: 26px;
+    background: rgba(57, 170, 226, 1);
+}
+.point{
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background:rgba(66, 219, 224, 1);
+    left: 50%;
+    top: -52px;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: show-fade .5s forwards 1; 
+}
+.pointDowm{
+    top: 76px;
+    background: rgba(57, 170, 226, 1)
+}
+.personInfo{
+    position: absolute;
+    width: 100px;
+    height: 130px;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.personInfoDown{
+    bottom: -184px;
+}
+.img{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 10px);
+    opacity: 0;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 1px solid rgba(66, 219, 224, 1);
+    animation: img-fade .5s forwards 1;
+    overflow: hidden;
+    & img{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+.imgDown{
+    bottom: 16px;
+    border: 1px solid rgba(57, 170, 226, 1);
+}
+.info{
+    height: 70px;
+    width: 100px;
+    // border: 1px solid rgba(66, 219, 224, 1);
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    & p{
+        color: rgba(57, 170, 226, 1);
+        text-align: center;
+        transform: translateY(-10px);
+        opacity: 0;
+        animation: info-fade .5s forwards 1;
+    }
+}
+.infoDown{
+    bottom: -55px;
+    // border: 1px solid rgba(57, 170, 226, 1);
+}
+@keyframes show-fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes info-fade {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes img-fade {
+    from {
+        transform: translate(-50%, 10px);
+        opacity: 0;
+    }
+    to{
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}

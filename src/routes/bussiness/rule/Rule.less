@@ -1,0 +1,330 @@
+@import "../../../theme/common.less";
+
+a:hover{
+  color: #fff;
+}
+.title{
+  width: 98%;
+  margin: 3vh auto;
+  .border;
+  height: 90%;
+}
+.title:after{
+  content: "";
+  display: inline-block;
+  clear: both;
+}
+.wrap{
+  width: 100%;
+  height: 100%;
+  background-color: @cf-base-bg;
+}
+.content{
+  width: 100%;
+}
+
+.searchGroup{
+  margin: 2vh auto;
+  width: 98%;
+  background-color: @cf-base-bg;
+  border:1px solid @cf-border-color;
+  line-height: 74px;
+}
+.condition{
+  float: left;
+  //width: 500px;
+  color: #ffffff;
+}
+.label{
+  //display: inline-block;
+  margin: 0px 20px 0px 20px;
+}
+.btnGroup{
+  margin: 2vh auto;
+  width: 98%;
+  height: 30px;
+  background-color: @cf-base-bg;
+}
+.list{
+  margin: 2vh auto;
+  width: 98%;
+  height: 74px;
+  //background-color: @cf-base-bg;
+}
+.delete{
+  float: right;
+  width: 80px;
+  height: 30px;
+  border-radius: 6px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 10px;
+}
+
+.importIcon{
+  display: inline-block;
+  width: 18px;
+  height: 16px;
+  background: url("../../../assets/import.png") no-repeat;
+  vertical-align: middle;
+}
+.exportIcon{
+  display: inline-block;
+  width: 18px;
+  height: 16px;
+  background: url("../../../assets/export.png") no-repeat;
+  vertical-align: middle;
+}
+.addIcon{
+  display: inline-block;
+  width: 18px;
+  height: 16px;
+  background: url("../../../assets/addIcon.png") no-repeat;
+  vertical-align: middle;
+}
+.modalHeader{
+  width: 100%;
+  height: 35px;
+  .border-bottom;
+  line-height: 35px;
+  padding-left: 10px;
+}
+.modalHeaderTitle{
+  color: @cf-title-text;
+  font-size: 16px;
+  font-weight: bold;
+
+}
+
+.modalBody > div {
+  background-color: @cf-base-bg;
+}
+.serchWrap{
+  margin-top: 16px;
+  color: #ffffff;
+}
+.textAreaWrap{
+  display: flex;
+  align-items: center;
+}
+.text{
+  display: inline-block;
+  text-align: right;
+  line-height: 32px;
+  width: 78px;
+  margin-right: 10px;
+  
+}
+.input{
+  display: inline-block;
+  width: 70%;
+  height: 32px;
+  margin-left: 10px;
+  text-align: left;
+  opacity: 0;
+  animation: inputAni .2s  .3s 1;
+  animation-fill-mode:forwards;
+}
+@keyframes inputAni{
+  from{opacity: 0}
+  to{opacity: 1}
+}
+.checkboxInput{
+  display: inline-block;
+  width: 300px;
+  height: 50px;
+  margin-left: 10px;
+}
+.line{
+  width: 100%;
+  height: 1px;
+  background-color: @cf-border-color;
+}
+.moduleLine{
+  margin-top: 12px;
+  width: 100%;
+  height: 1px;
+  background-color: @cf-border-color;
+}
+.footer{
+  padding: 20px 116px;
+}
+.refreshMatch{
+  width: 80px;
+  height: 30px;
+}
+.refreshMatch:nth-child(1){
+  float: left;
+}
+.refreshMatch:nth-child(2){
+  float: right;
+}
+.tableBtn{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.tableEdit{
+  background: url('../../../assets/tableEdit.png');
+  background-size: 100% 100%;
+}
+.tableDelete{
+  background: url('../../../assets/tableDelete.png');
+  background-size: 100% 100%;
+}
+.modal{
+  transition: width .2s;
+}
+.modal div {
+  background-color: @cf-base-bg;
+}
+
+.radio{
+  color: #fff;
+  width: 60px;
+  font-size: 12px;
+}
+.treeWapper{
+  // text-align: center;
+  .border-bottom;
+  & .treeSwiper{
+    height: 333px;
+    overflow: auto;
+  }
+}
+.addTitle{
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  .border-bottom;
+  & span{
+    display: inline-block;
+    vertical-align: middle;
+    color: @cf-title-text;
+    margin-left: 5px;
+  }
+}
+.numberOne, .numberTwo, .numberThree{
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin: 0 0 0 10px;
+}
+.numberOne{
+  background: url(../../../assets/number-one.png) no-repeat;
+  background-size: 100% 100%;
+}
+.numberTwo{
+  background: url(../../../assets/number-two.png) no-repeat;
+  background-size: 100% 100%;
+}
+.numberThree{
+  background: url(../../../assets/number-three.png) no-repeat;
+  background-size: 100% 100%;
+}
+.treeWapper:nth-of-type(2){
+  .border-left;
+  .border-right;
+}
+.submit{
+  width: 70%;
+  margin: 15px auto;
+}
+.moreOperaBtnLeft, .moreOperaBtnRight{
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  height: 20px;
+  width: 20px;
+  // background: #02abe3!important;
+  // transform: translateY(-50px);
+  padding: 8px;
+  // border-radius: 6px 0 0 6px;
+  // background: url('../../../assets/arrow-right.png');
+  
+  color: #fff;
+  z-index: 1000;
+  cursor: pointer;
+  // animation: arrowRight 1.5s infinite;
+}
+.moreOperaBtnLeft{
+  background: url('../../../assets/arrow-left.png');
+  background-size: 100% 100%;
+  // animation: arrowLeft 1.5s infinite;
+  // animation-timing-function: cubic-bezier(.645,.045,.355,1);
+}
+.moreOperaBtnRight{
+  background: url('../../../assets/arrow-right.png');
+  background-size: 100% 100%;
+  // animation: arrowRight 1.5s infinite;
+  // animation-timing-function: cubic-bezier(.645,.045,.355,1);
+}
+@keyframes arrowRight{
+  from {
+    right: 20px;
+    opacity: .5;
+  }
+  to{
+    right: 10px;
+    opacity: 1;
+  }
+}
+@keyframes arrowLeft{
+  from {
+    right: 10px;
+    opacity: .5;
+  }
+  to{
+    right: 20px;
+    opacity: 1;
+  }
+}
+.treeNode{
+  display: inline-block;
+  width: 18px;
+  height: 15px;
+  background: url('../../../assets/files.png') no-repeat;
+  background-size: 100% 100%;
+  // vertical-align: middle;
+  margin-right: 10px;
+}
+.treeNode_open{
+  display: inline-block;
+  width: 18px;
+  height: 15px;
+  background: url('../../../assets/file_open.png') no-repeat;
+  background-size: 100% 100%;
+  // vertical-align: middle;
+  margin-right: 10px;
+}
+
+
+// :global(.treeRadios .ant-radio-inner:after){
+//   width: 5px;
+//   height: 5px;
+//   top: 3px;
+//   left: 3px;
+// }
+.treeRadios{
+  :global{
+    .ant-radio-inner{
+      display: inline-block;
+      height: 12px;
+      width: 12px;
+      vertical-align: middle;
+    }
+    .ant-radio-inner::after{
+      height: 5px;
+      width: 5px;
+      left: 3px;
+      top: 3px;
+    }
+    .treeSpan{
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}

@@ -1,0 +1,221 @@
+@import "../../../theme/common.less";
+
+a:hover{
+  color: #fff;
+}
+.container{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+// 设备分组管理
+.content{
+  height: calc(~"100vh - 130px");
+  min-height: 804px;
+  .border;
+  border-top: none;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.searchGroup{
+  // margin: 2vh auto;
+  width: 100%;
+  height: 74px;
+  background-color: @cf-base-bg;
+  border:1px solid @cf-border-color;
+  line-height: 74px;
+}
+.condition{
+  float: left;
+  //width: 500px;
+  color: #ffffff;
+}
+.label{
+  //display: inline-block;
+  margin: 0px 20px 0px 28px;
+}
+.btnGroup{
+  margin: 1vh auto;
+  width: 100%;
+  height: 30px;
+  background-color: @cf-base-bg;
+}
+.list{
+  // margin: 2vh auto;
+  width: 100%;
+  max-height: 700px;
+  overflow: auto;
+  //background-color: @cf-base-bg;
+}
+//.checkAll{
+//  display: inline-block;
+//  width: 95px;
+//  height: 30px;
+//  border: 1px solid @cf-border-color;
+//  border-radius: 6px;
+//  color: #ffffff;
+//  text-align: center;
+//  line-height: 30px;
+//}
+.delete{
+  float: right;
+  width: 80px;
+  height: 30px;
+  border-radius: 6px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 10px;
+}
+
+.importIcon{
+  display: inline-block;
+  width: 18px;
+  height: 16px;
+  background: url("../../../assets/import.png") no-repeat;
+  vertical-align: middle;
+}
+.exportIcon{
+  display: inline-block;
+  width: 18px;
+  height: 16px;
+  background: url("../../../assets/export.png") no-repeat;
+  vertical-align: middle;
+}
+.addIcon{
+  display: inline-block;
+  width: 18px;
+  height: 16px;
+  background: url("../../../assets/addIcon.png") no-repeat;
+  vertical-align: middle;
+}
+.modalHeader{
+  width: 100%;
+  height: 35px;
+  .border-bottom;
+  line-height: 35px;
+  padding-left: 10px;
+  position: relative;
+}
+.modalHeaderTitle{
+  color: @cf-title-text;
+  font-size: 16px;
+  font-weight: bold;
+}
+// .modalBody{
+//   width: 830px;
+//   transition:width 0.3s;
+//   -moz-transition:width 0.3s; 
+//   -webkit-transition:width 0.3s;
+//   -o-transition:width 0.3s; 
+// }
+// .modalBody:hover{
+//   width:830px;
+// }
+.modalBody > div {
+  background-color: @cf-base-bg; 
+}
+.serchWrap{
+  margin-top: 15px;
+  color: #ffffff;
+}
+.text{
+  display: inline-block;
+  text-align: right;
+  line-height: 32px;
+  width: 135px;
+}
+.areaText{
+  display: inline-block;
+  text-align: right;
+  line-height: 456px;
+  width: 140px;
+  margin-right: 10px;
+  // cursor: pointer;
+}
+.input{
+  display: inline-block;
+  width: 200px;
+  height: 32px;
+  margin-left: 10px;
+}
+.footer{
+  padding: 30px 116px;
+}
+.refreshMatch{
+  width: 80px;
+  height: 30px;
+}
+.tableBtn{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.tableEdit{
+  background: url('../../../assets/tableEdit.png');
+  background-size: 100% 100%;
+}
+.tableDelete{
+  background: url('../../../assets/tableDelete.png');
+  background-size: 100% 100%;
+}
+.configWrap{
+  color: #ffffff;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.modalClose{
+  position: absolute;
+  right: 10px;
+  font-size: 18px;
+  color:#02abe3;
+  cursor: pointer;
+}
+
+.modalClose:hover{
+  
+  color: #05c1ff;
+ 
+}
+
+.areaInput{
+display: none;
+// visibility: hidden;
+// transition: display 1s;
+}
+
+.arrowChange{
+  display: inline-block;
+  color:#1890ff;
+  align-self: center;
+  cursor: pointer;
+}
+.arrowShow{
+  cursor: pointer;
+  display: none
+}
+
+  .textAreaShow{
+ display: block;
+align-self: center;
+top:25px;
+  }
+
+  .sureBtn{
+    display: block;
+    margin: 0 auto;
+  }
+
+
+  .testVlcModal{
+    overflow: hidden;
+    height: 300px;
+    width: 533px;
+  }

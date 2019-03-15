@@ -1,0 +1,104 @@
+.wrapper{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    /* padding: 20px 0 50px; */
+    padding: 20px 0 0px;
+    border-right:1px solid #005c7b;
+    border-left:1px solid #005c7b;
+}
+.background{
+    height: 100%;
+    width: 100%;
+    /* background: #33444E; */
+    position: relative;
+    /* overflow: auto; */
+    box-sizing: border-box;
+    padding: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-basis: inherit;
+    align-content: flex-start;
+    border-top:1px solid #005c7b;
+    border-bottom:1px solid #005c7b;
+}
+.uploadWrapper{
+    width: 400px;
+    height: 600px;
+    margin: 0 20px;
+}
+.magnifier{
+    width: 400px;
+    /* height: 600px; */
+    height: 900px;
+}
+
+.uploadBtn{
+    height: 60px;
+    text-align: center;
+}
+.magWrapper{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    top:150px;
+}
+.magWrapper img{
+    position: absolute;
+    width: 800px;
+    height: 800px;
+}
+.uploadimg{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    border: 1px dashed #d9d9d9;
+}
+.uploadimg img{
+    width: 100%;
+    height: 100%;
+}
+.rect{
+    display: none;
+    height: 200px;
+    width: 200px;
+    /*background: rgba(41, 84, 123, .5);*/
+    background: url('../../../assets/masker.png') no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: move;
+}
+.imgList{
+    height: 128px;
+    width: 100%;
+    margin-top: 20px;
+    overflow: auto
+}
+.itemImg{
+    width: 127px;
+    height: 127px;
+    cursor: pointer;
+    /*border: 2px solid #109DEC;*/
+    border: 2px solid #33444E;
+    margin-right: 5px;
+}
+.active{
+    border: 2px solid #109DEC;
+}
+.Progress{
+    text-align: center;
+
+}
+.circle{
+    margin: 110px 0;
+}

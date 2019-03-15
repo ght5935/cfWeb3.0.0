@@ -1,0 +1,115 @@
+@import "../../../theme/common.less";
+
+.content{
+  height: calc(~"100vh - 130px");
+  min-height: 804px;
+  .border;
+  border-top: none;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.searchBar{
+  width: 100%;
+  height: 74px;
+  line-height: 74px;
+  border:1px solid @cf-border-color;
+}
+.selectInput{
+  color: #ffffff;
+}
+.selectInput .label{
+  margin: 0 20px 0 28px;
+}
+.newRoleWapper{
+  position: relative;
+  width: 100%;
+  text-align: left;
+  margin: 20px 0;/* 此处需要改成  vh  实现高度自适应 TODO*/
+}
+.newRoleBtn{
+  height: 37px;
+  width: 125px;
+  letter-spacing: 1.5px;
+}
+.addIcon{
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  background: url(../../../assets/addIcon.png);
+  background-size:100% 100%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.modalBody > div {
+  background-color: @cf-base-bg;
+}
+.serchWrap{
+  margin-top: 20px;
+  color: #ffffff;
+  position: relative;
+}
+.text{
+  display: inline-block;
+  text-align: right;
+  line-height: 32px;
+  width: 115px;
+  margin-right: 10px;
+}
+.input{
+  display: inline-block;
+  width: 200px;
+  height: 32px;
+}
+.recInput{
+  display: inline-block;
+  width: 320px;
+  height: 32px;
+}
+.footer{
+  padding: 20px 98px;
+}
+.refreshMatch{
+  width: 80px;
+  height: 30px;
+}
+.modalHeader{
+  width: 100%;
+  height: 35px;
+  .border-bottom;
+  line-height: 35px;
+  padding-left: 10px;
+}
+.modalHeaderTitle{
+  color: @cf-title-text;
+  font-size: 16px;
+  font-weight: bold;
+}
+.tableBtn{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.tableEdit{
+  background: url('../../../assets/tableEdit.png');
+  background-size: 100% 100%;
+}
+.tableCheck{
+  background: url('../../../assets/tableCheck.png');
+  background-size: 100% 100%;
+}
+.tableDelete{
+  background: url('../../../assets/tableDelete.png');
+  background-size: 100% 100%;
+}
+
+.formItem{
+  box-sizing: border-box;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+.closeBtn{
+  margin-left: 70px;
+}
+

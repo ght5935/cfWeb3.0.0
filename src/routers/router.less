@@ -1,0 +1,105 @@
+@import "../theme/common.less";
+.wrap {
+  height: 100%;
+  margin: 0px auto;
+  background: @cf-base-bg;
+  width: 1920px;
+}
+
+.header {
+  background: @cf-header-bg;
+  height: 48px;
+  margin: 0px;
+  padding: 0 55px;
+}
+.headerNone{
+  display: none;
+}
+
+.logo{
+  float: left;
+  height: 100%;
+  background: url('../../src/assets/logo.png') no-repeat center 0;
+  background-size: 181px 31px;
+  width: 181px;
+  height: 31px;
+  margin-top: 9px;
+
+}
+
+
+.menu{
+  float: left;
+  height: 100%;
+  margin-left: 18%;
+}
+
+.menu li{
+  width: 150px;
+  text-align: center;
+}
+
+.menu a{
+  font-family: 'SimHei',sans-serif;
+  font-size: 18px;
+  line-height: 48px;
+}
+
+
+@media(max-width:1900px){
+  .menu{
+    margin-left: 5%;
+  }
+}
+
+.logout{
+  height: 30px;
+  width: 30px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 20px;
+  background: url('../../src/assets/logout.png')  no-repeat center 0;
+  background-size: 30px 30px;
+
+}
+
+
+.content {
+  border: 0;
+  //height: 880px;
+  height: calc(100vh - 48px);
+  background: @cf-base-bg;
+  width: 100%;
+  position: relative;
+}
+
+.linker {
+  float: right;
+  margin-right: 20px;
+  height: 48px;
+  width: 100px;
+  font-family: 'SimHei',sans-serif;
+  line-height: 48px;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.linker a{
+  font-size: 18px;
+  line-height: 48px;
+  color: orangered;
+
+}
+
+.linker a:hover{
+  color: #ffffff;
+}
+.screen{
+  color:rgba(255, 255, 255, 0.67);
+  float: right;
+  position: relative;
+  top: 9px;
+}
+
+

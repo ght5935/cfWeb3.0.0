@@ -1,0 +1,252 @@
+@import "~antd/dist/antd.less";
+@import "./theme/default.less";
+@import "./theme/common.less";
+
+::-webkit-scrollbar {/*滚动条整体样式*/
+  width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  background: #535353;
+}
+::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  background: #EDEDED;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  // font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei", sans-serif;
+  font-family: Arial, "Microsoft YaHei";
+}
+html, body, :global(#root) {
+  height: 100%;
+  width: 100%;
+  // min-height: 930px; 
+  // min-width: 1623px;
+  margin: 0px auto;
+  background: @cf-base-bg;
+
+}
+
+/*  antd Table样式重写 */
+:global( .ant-menu-dark.ant-menu-inline .ant-menu-item) {
+  height: 70px;
+}
+
+:global(#root .ant-table-thead tr th ) {
+  text-align: center;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  background: @cf-base-bg;
+}
+
+:global(#root .ant-table-bordered .ant-table-thead tr th ) {
+  height: 60px;
+  border: 1px solid @cf-border-color;
+}
+
+:global(#root .ant-table-bordered .ant-table-tbody tr td ) {
+  border: 1px solid @cf-border-color;
+  text-align: center;
+  color: #d6d6d6;
+  padding: 8px;
+  font-size: 16px;
+}
+
+:global(#root .ant-table-bordered .ant-table-body table ) {
+  border: none;
+  border-collapse:collapse;
+}
+:global(#root .ant-table-placeholder ) {
+  background: #1C303E;
+  border-bottom: 1px solid @cf-border-color;
+  color: #d6d6d6;
+  font-size: 16px;
+  font-weight: bold;
+}
+:global(#root .ant-table-bordered.ant-table-empty .ant-table-placeholder ) {
+  border-right: 1px solid @cf-border-color;
+  border-left: 1px solid @cf-border-color;
+}
+
+:global(#root .ant-table-tbody tr.ant-table-row-selected td ) {
+ background: @cf-selectorHover-color;
+}
+:global(#root .ant-table-tbody tr:hover td ) {
+ background: @cf-selectorHover-color;
+}
+
+:global(div .ant-table-thead tr th ) {
+  text-align: center;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  background: @cf-base-bg;
+}
+
+:global(div .ant-table-bordered .ant-table-thead tr th ) {
+  height: 60px;
+  border: 1px solid @cf-border-color;
+}
+
+:global(div .ant-table-bordered .ant-table-tbody tr td ) {
+  border: 1px solid @cf-border-color;
+  text-align: center;
+  color: #d6d6d6;
+  padding: 8px;
+  font-size: 16px;
+}
+
+:global(div .ant-table-bordered .ant-table-body table ) {
+  border: none;
+}
+:global(div .ant-table-placeholder ) {
+  background: #1C303E;
+  border-bottom: 1px solid @cf-border-color;
+  color: #d6d6d6;
+  font-size: 16px;
+  font-weight: bold;
+}
+:global(div .ant-table-bordered.ant-table-empty .ant-table-placeholder ) {
+  border-right: 1px solid @cf-border-color;
+  border-left: 1px solid @cf-border-color;
+}
+
+:global(div .ant-table-tbody tr.ant-table-row-selected td ) {
+ background: @cf-selectorHover-color;
+}
+:global(div .ant-table-tbody tr:hover td ) {
+ background: @cf-selectorHover-color;
+}
+:global(div .ant-table-fixed-header > .ant-table-content > .ant-table-scroll > .ant-table-body){
+  background: transparent;
+}
+:global(div .ant-table-bordered .ant-table-header > table){
+  border: none;
+}
+:global(div .ant-table table){
+  border-collapse: collapse;
+}
+
+// :global(div .ant-table-fixed-header .ant-table-scroll .ant-table-header){
+//   overflow: hidden;
+// }
+
+
+
+/* antd Input 样式重写 */
+:global(#root .ant-input){
+  border: 1px solid @cf-border-color;
+}
+:global(div .ant-checkbox + span){
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #fff;
+}
+
+/* antd Tree 样式重写 */
+:global(#root .ant-tree){
+  color: #d6d6d6;
+}
+:global(div .ant-tree){
+  color: #d6d6d6;
+}
+:global(#root .ant-tree li .ant-tree-node-content-wrapper){
+  color: #d6d6d6;
+}
+:global(div .ant-tree li .ant-tree-node-content-wrapper){
+  color: #d6d6d6;
+}
+:global(#root .ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected){
+  background: #1B3745;
+}
+:global(div .ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected){
+  background: #1B3745;
+}
+:global(#root .ant-tree li .ant-tree-node-content-wrapper:hover){
+  background: #1B3745;
+}
+:global(div .ant-tree li .ant-tree-node-content-wrapper:hover){
+  background: #1B3745;
+}
+
+:global(div .ant-modal-body){
+  padding: 0;
+}
+
+/*  Tabs 样式重写 */
+
+:global(#root .ant-tabs.ant-tabs-card .ant-tabs-bar .ant-tabs-tab){
+  font-size: 18px;
+  background: @cf-base-bg;
+  color: @cf-title-text;
+  .border;
+}
+:global(#root .ant-tabs.ant-tabs-card .ant-tabs-bar .ant-tabs-tab-active){
+  background: @cf-border-color;
+  color: @cf-base-bg;
+}
+:global(#root .ant-tabs-bar){
+  .border-bottom;
+  margin: 0;
+}
+
+/* Upload 样式重写 */
+:global(#root .ant-upload.ant-upload-drag){
+  background: @cf-base-bg;
+  border: 1px dashed @cf-border-color;
+  &:hover{
+    border: 1px dashed #A6A6A7;
+  }
+}
+:global(#root .ant-upload.ant-upload-drag p.ant-upload-text){
+  color: @cf-title-text;
+}
+:global(#root .ant-upload-list){
+ display: none;
+}
+
+/* Progress 样式重写 */
+:global(#root .ant-progress-text){
+  color: #fff;
+}
+/* TreeSelect 样式重写 */
+:global(div .ant-select-tree){
+  max-height: 400px;
+}
+
+/* Pagination 样式重写 */
+:global(ul .ant-pagination-jump-prev:after, .ant-pagination-jump-next:after){
+  color: #02abe3;
+}
+:global(ul .ant-pagination-item){
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #02abe3;
+  & a{
+    color: #02abe3
+  }
+}
+:global(ul .ant-pagination-item-active){
+  background: #02abe3;
+  & a{
+    color: #fff;  
+  }
+}
+:global(ul .ant-pagination-item-active:focus a){
+  color: #fff;
+}
+:global(ul .ant-pagination-options-quick-jumper input){
+  border: 1px solid #02abe3;
+  background-color: transparent;
+  color: #fff;
+  height: 24px;
+}

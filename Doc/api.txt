@@ -1,0 +1,562 @@
+系统配置文档
+
+1用户配置列表   /cfMosqueManage/scuser/list.do
+
+	参数：pageSize   int    必填
+	      pageNo     int    必填
+	      name       String  选填     用户名
+	      orgunitId   int     选填     所属组织ID
+	      roleId   int     选填         所属角色Id
+
+	  返回结果：
+
+
+2添加用户   /cfMosqueManage/scuser/add.do
+
+   参数：  name	        string       必填
+	      loginName     string       必填
+	      pwd           String       必填     密码
+	      phone         String       必填     电话
+	      roleId        int          必填         所属角色Id
+	      orgunitId     int          必填     所属组织ID
+	      email         String       可选      邮箱
+	      memo          String       可选      备注
+
+	  返回结果：
+
+
+3. 修改用户                  /cfMosqueManage/scuser/modify.do
+
+	参数：id             int         必填      用户ID
+		  name	        string       必填      用户名
+	      loginName     string       必填	   登录名
+	      pwd           String       必填     密码
+	      phone         String       必填     电话
+	      roleId        int          必填         所属角色Id
+	      orgunitId     int          必填     所属组织ID
+	      email         String       可选      邮箱
+	      memo          String       可选      备注
+
+	  返回结果：
+
+
+4.删除用户                  /cfMosqueManage/scuser/delete.do
+
+		参数：ids             int         必填      用户ID,多个用逗号分割
+			  type           int         必填      type=0时删除全部用户,type!=0时删除选中用户
+
+		返回结果：
+
+
+5，角色配置列表     	/cfMosqueManage/mqrole/list.do
+
+	参数：pageSize   int    必填
+	      pageNo     int    必填
+	      roleId     int    必填       角色Id
+
+
+6,添加角色               /cfMosqueManage/mqrole/add.do
+
+      参数：  name	        string       必填
+      		  memo          String       选填
+
+	返回结果：
+
+
+
+ 7，修改角色                /cfMosqueManage/mqrole/modify.do
+
+ 		参数：id               int       必填
+ 			  name	        string       选填
+      		  memo          String       选填
+      返回结果：
+
+
+
+  8,删除角色               /cfMosqueManage/mqrole/delete.do
+
+  		参数：id               int       必填
+
+      返回结果：
+
+
+  9.获取所有角色           /cfMosqueManage/mqrole/getAllRole.do    (权限配置)
+  {
+  "status": 0,
+  "message": "操作成功",
+  "result": [
+    {
+      "id": 1,
+      "name": "系统管理员",
+      "memo": "系统管理员",
+      "gmtCreate": 1515743313000,
+      "gmtModified": 1515743313000
+    },
+    {
+      "id": 2,
+      "name": "运维人员",
+      "memo": "运维人员",
+      "gmtCreate": 1515743341000,
+      "gmtModified": 1515743341000
+    },
+    {
+      "id": 4,
+      "name": "寺管会成员",
+      "memo": "寺管会成员",
+      "gmtCreate": 1515745892000,
+      "gmtModified": 1515745894000
+    },
+    {
+      "id": 5,
+      "name": "公安领导",
+      "memo": "公安领导",
+      "gmtCreate": 1515745905000,
+      "gmtModified": 1515745905000
+    }
+  ]
+}
+
+
+  10.获取组织的树结构  	  /cfMosqueManage/orgunit/getTree.do
+
+
+  11.根据组织Id得到组织   /cfMosqueManage/orgunit/getOrgunitById.do
+
+  		参数：orgunitId               int       必填
+
+      返回结果：
+
+
+ 12.新增子项目           /cfMosqueManage/orgunit/addSubOrgunit.do
+
+ 		参数：name               String       必填     名字
+ 			  parentId            int         必填		父节点Id
+ 			  coordinate	      String      选填	   坐标位置
+ 			  memo               String        选填     备注
+ 			  code               String       选填      机构编号
+ 			  sort_num            int         选填       排序号
+
+      返回结果：
+
+
+ 13修改组织                /cfMosqueManage/orgunit/modifySubOrgunit.do
+
+ 		参数：id                 int         必填	    组织ID
+ 			  name               String       必填     名字
+ 			  parentId            int         必填		父节点Id
+ 			  coordinate	      String      选填	   坐标位置
+ 			  memo               String        选填     备注
+ 			  code               String       选填      机构编号
+ 			  sort_num            int         选填       排序号
+
+      返回结果：
+
+ 14.删除组织 			 /cfMosqueManage/orgunit/deleteOrgunit.do
+
+ 		参数：orgunitId               int       必填
+
+      返回结果：
+
+15.获取所有模块                     /cfMosqueManage/module/getAllModule.do
+
+  		返回结果：
+
+
+16.添加用户权限                  /cfMosqueManage/module/bindRoleModule.do
+
+		参数：roleId               int       必填       角色Id
+			  moduleIds            int       必填       模块ID （多个用逗号分割）
+
+
+
+17.//根据角色Id和父模块ID查询子节点（）       /cfMosqueManage/module/getSubModuleByRlIdAndMdId.do
+
+    参数：  roleId          int         必填           角色ID
+            parentId        int         必填             父节点Id
+
+      返回结果
+
+18. 根据id得到所有上级组织       /cfMosqueManage/orgunit/getAllParentIdByOrgId.do
+
+    参数：  orgunitId          int         必填           组织Id
+
+      返回结果
+
+
+
+///////////////////////////业务管理//////////////////////////////////////
+
+
+19. 摄像头分页列表                               /cfMosqueManage/camrea/list.do   Get
+
+       参数：  pageSize          int         必填
+                pageNo           int          必填
+                name             String       可选            摄像头名字
+                id               int           可选           摄像头id
+                orgunitId        int           可选            所属组织ID
+                ip_address       String         可选           ip地址
+
+            返回结果
+
+
+20.增加摄像头                               /cfMosqueManage/camrea/add.do   Post
+
+     参数：  必选
+              name             String        名字
+              categoryId       int           分组id
+              playUrl          String         播放地址
+              cjdUrl            String        采集地址
+              cjdUuid           String        采集端uuid
+              cjdSubid          int           采集端序号ID
+              modelType         int            摄像头类型
+              config            String          规则
+              src_id            String          摄像头uuid
+
+            可选
+            uniCode            Sting        统一编码
+            localCode         Sting          本地编码
+            installAddress       Sting        安装地址
+            coordinate          Sting          坐标
+            ipAddress           String        ip地址
+            modelName           String        摄像头型号名称
+            screenNo            int           投屏编号
+            orgunit_id          int             所属组织id
+            cameraUsername     String          摄像头用户名
+            cameraPassword       String          摄像头密码
+            memo                String           备注
+            debugUrl             String          调试地址
+
+       返回结果：
+
+ 21.修改摄像头                /cfMosqueManage/camrea/modify.do   Post
+
+        参数：  必选
+               id               int           摄像头id
+               name             String        名字
+               categoryId       int           分组id
+               playUrl          String         播放地址
+               cjdUrl            String        采集地址
+               cjdUuid           String        采集端uuid
+               cjdSubid          int           采集端序号ID
+               modelType         int            摄像头类型
+               config            String          规则
+                  src_id            String          摄像头uuid
+
+             可选
+             uniCode            Sting        统一编码
+             localCode         Sting          本地编码
+             installAddress       Sting        安装地址
+             coordinate          Sting          坐标
+             ipAddress           String        ip地址
+             modelName           String        摄像头型号名称
+             screenNo            int           投屏编号
+             orgunit_id          int             所属组织id
+             cameraUsername     String          摄像头用户名
+             cameraPassword       String          摄像头密码
+             memo                String           备注
+             debugUrl             String          调试地址
+
+        返回结果：
+
+ 22，删除摄像头             /cfMosqueManage/camrea/modify.do   Post
+
+      参数：   srcId           摄像头uuid
+
+      返回结果
+
+
+ 23.目标人翻页列表           /cfMosqueManage/poi/list.do       get
+
+      参数：   必选
+                pageSize         int
+                pageNo           int
+
+              可选
+              name             String          名字
+              gender            int             性别
+              identityCard      String         身份证
+              orgunitId           int           组织id
+              groupId           int            分组id
+              threshold         int            阈值
+
+              返回结果
+
+
+
+24 上传图片接口            /cfMosqueManage/poi/uploadFace.do       post
+          参数：   必选
+          image_1        file      照片文件
+
+       返回结果
+       {"status":0,"message":"操作成功","result":
+       {"
+       src":{"url":"C:/Users/dell/Desktop/C/origin/1516860982190_4e47.jpg","path":"1516860982190_4e47.jpg","name":"1516860982190_4e47.jpg","flag":0},
+       "dst":[{"url":"http://192.168.1.183:8090/dfscImages/corp/1516860989289_5876.jpg","path":"1516860989289_5876.jpg","name":"1516860989289_5876.jpg","flag":0}]}}
+
+
+
+25.根据上传图片创建人             /cfMosqueManage/poi/addByUpload.do       post
+
+      参数：   必选
+              name          String      名字
+              gender        int        性别
+              threshold     int       阈值
+              groupId       int       分组id
+              faceCount     int       uploadFace后的dst的照片数量
+              originCount   int        uploadFace后的src的照片数量 （一般为一张，原图）
+
+              img_path_           String        uploadFace后 dst的path    （循环faceCount，img_path_+i）
+              originImg_path_     String        uploadFace后 src的path    （originCount，originImg_path_+i）
+
+              可选
+              orgunitId              int         所属组织id
+              identityCard           String       身份证
+              impTag                  String        标签
+              memo                  String         备注
+
+              返回结果；
+
+
+26.修改poi           /cfMosqueManage/poi/modify.do       post
+
+           参数：   必选
+                        personId     String       person的UUid
+                        name          String      名字
+                        gender        int        性别
+                        threshold     int       阈值
+                        groupId       int       分组id
+                        faceCount     int       uploadFace后的dst的照片数量
+                        originCount   int        uploadFace后的src的照片数量 （一般为一张，原图）
+
+                        img_path_           String        uploadFace后 dst的path    （循环faceCount，img_path_+i）
+                        originImg_path_     String        uploadFace后 src的path    （originCount，originImg_path_+i）
+
+                        可选
+                        orgunitId              int         所属组织id
+                        identityCard           String       身份证
+                        impTag                  String        标签
+                        memo                  String         备注
+
+                        返回结果；
+
+
+27.删除poi                  /cfMosqueManage/poi/deletePersons.do       post
+
+             参数  必选
+                    personIds      String          person的uuid （多个以逗号分割）
+                    type          int              0为删除选中的，1为删除所有person
+
+                 返回结果
+
+
+
+28  目标分组翻页列表                                         /cfMosqueManage/group/list.do       get
+          参数：   必选
+                          pageSize         int
+                          pageNo           int
+
+                        可选
+                        name             String          名字
+                       type              int            分组类型
+                        返回结果
+
+29.查找某分组下的目标列表                                            /cfMosqueManage/group/memberList.do       get
+        参数：   必选
+                                  pageSize         int
+                                  pageNo           int
+
+                  可选
+                   groupId             int          分组id
+
+
+30.添加分组                                        /cfMosqueManage/group/add.do       post
+
+        参数      必选
+                  type         int          分组类型 （默认为0,  白名单为1，黑名单为2）
+                   name        String         名字
+
+                  可选
+                  memo       String           备注
+
+
+
+
+31.修改分组                              /cfMosqueManage/group/modify.do       post
+
+          参数      必选
+                      id       int          分组id
+                   type         int          分组类型 （默认为0,  白名单为1，黑名单为2）
+                    name        String         名字
+
+                  可选
+                  memo       String           备注
+
+
+32.删除分组                             /cfMosqueManage/group/delete.do       post
+        参数      必选
+                  groupId      int        分组id
+
+
+
+33.得到所有分组                        /cfMosqueManage/group/listAll.do       get
+      无参数
+
+
+34，报警规则翻页列表                  /cfMosqueManage/alarmConfig/list.do       get
+          参数      必选
+                        pageSize         int
+                         pageNo           int
+
+                    可选
+                   orgunitId   int            组织id
+                   name         String        名字/身份证
+                   configType    int         提示方式(0-报警,1-通过)
+                   groupId       int         分组id
+
+
+35，新增规则                                 /cfMosqueManage/alarmConfig/add.do      post
+          参数      必选
+                    cmOrgunitId        int         摄像头所属组织id
+                    poiOrgunitId       int         目标人所属组织id
+                    poiGroupId         int         目标人所属分组id
+                    configType         int        提示方式(0-报警,1-通过)
+                    alarmTime          string      报警时间   （报警时间0-每天，1-7表示星期，多个以逗号隔开）
+
+
+                    可选
+                    personId         String         person的uuid
+                    memo             String         备注
+
+
+
+36.修改规则                         /cfMosqueManage/alarmConfig/modify.do      post
+             参数      必选
+                        id                int          规则ID
+                       cmOrgunitId        int         摄像头所属组织id
+                       poiOrgunitId       int         目标人所属组织id
+                       poiGroupId         int         目标人所属分组id
+                       configType         int        提示方式(0-报警,1-通过)
+                       alarmTime          string      报警时间   （报警时间0-每天，1-7表示星期，多个以逗号隔开）
+
+
+                        可选
+                        personId         String         person的uuid
+                         memo
+
+37删除规则                 /cfMosqueManage/alarmConfig/delete.do      post
+
+               参数： 必选
+                      id           int          规则ID
+
+
+38.  根据分组和所属组织找目标人             /cfMosqueManage/alarmConfig/getPoiByOrgIdAndGroupId.do          get
+
+            参数      必选
+                      pageSize         int
+                     pageNo           int
+
+                      可选
+                      poiGroupId         int          分组id
+                        orgunitId     int           组织id
+
+
+-------------------------------------------------基础功能---------------------------------------------------------------
+39.通过历史列表                            /cfMosqueManage/facetrackHistory/passList.do          get
+           参数：  必选
+                    pageSize         int
+                    pageNo           int
+
+                    可选
+                    cmOrgunitId     int     摄像头所属组织Id
+                    srcId           String  摄像头UUID
+                    startTime      String    开始时间
+                    endTime        String    结束时间
+                    startPercent  String     开始阈值
+                    endPercent     String    结束阈值
+                    name           String    名字
+                    idCard         String   身份证
+                    gender         int       性别（0女，1男）
+                    isglasses      int        是否戴眼镜 （未知为0，1 戴眼镜，2没带眼镜）
+                    age            int      年龄
+                    ismoustache    int      是否有胡子   （0：未知 ，1：有 ，2没有）
+                    ishat          int      是否戴帽子（0：未知 ，1：有 ，2没有）
+
+
+
+               返回结果；
+
+
+40.报警历史列表                            /cfMosqueManage/alarmHistory/alarmList.do          get
+                     参数：  必选
+                       pageSize         int
+                       ageNo           int
+
+                      可选
+                      cmOrgunitId     int     摄像头所属组织Id
+                       srcId           String  摄像头UUID
+                       startTime      String    开始时间
+                       endTime        String    结束时间
+                       startPercent  String     开始阈值
+                       endPercent     String    结束阈值
+                        name           String    名字
+                        idCard         String   身份证
+                        gender         int       性别（0女，1男）
+                       isglasses      int        是否戴眼镜 （未知为0，1 戴眼镜，2没带眼镜）
+                        age            int      年龄
+                       ismoustache    int      是否有胡子   （0：未知 ，1：有 ，2没有）
+                      ishat          int      是否戴帽子（0：未知 ，1：有 ，2没有）
+
+                      返回结果；
+
+ 41.移除facetrack上的某些照片                  /cfMosqueManage/facetrackHistory/removeFaceImg.do          post
+                  必选参数；
+                      facetrackId       int     人脸记录Id
+                       imgNames         String          照片名字集合(多个用逗号隔开)
+
+
+42.绑定人脸记录                                                     /cfMosqueManage/poi/bindFacetrack.do    post
+                  必选参数：
+                  facetrackId         int     人脸记录Id
+                  personId            int      personId
+
+
+43.通过facetrack创建新的person                 /cfMosqueManage /poi/addByFacetrack.do post
+                必选参数：
+                facetrackId           int     人脸记录Id
+                name          String      名字
+                gender        int        性别
+               threshold     int       阈值
+                groupId       int       分组id
+                household_register string 户籍
+
+              可选
+              orgunitId              int         所属组织id
+              identityCard           String       身份证
+              impTag                  String        标签
+              memo                  String         备注
+
+            返回结果
+
+
+44.获取所有的摄像头      /cfMosqueManage/camrea/listAll.do    get
+
+45.获取所有的分组      /cfMosqueManage/group/listAll.do    get
+
+
+---------------------------------------------------------------------------------------------------------
+46.日志翻页接口                   /cfMosqueManage/log/list.do    get
+
+                   必选参数：
+                                 pageSize        int
+                                 pageNo          int
+                    可选参数：
+                    userName        String       用户名字
+                    modelId         int         操作模块ID
+                    orgunitId       int          用户所属组织ID
+                    roleId           int         所属角色Id
+                    startTime       String        开始时间
+                    endTime          String       结束时间
+
+
+
+
